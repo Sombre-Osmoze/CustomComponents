@@ -88,7 +88,7 @@ open class CustomLabel: UILabel, Custom {
 		initUI()
 	}
 
-	public func initUI() -> Void { }
+	open func initUI() -> Void { }
 
 }
 
@@ -129,7 +129,7 @@ open class CustomTextField: UITextField, Custom {
 		initUI()
 	}
 
-	public func initUI() -> Void { }
+	open func initUI() -> Void { }
 
 }
 
@@ -170,7 +170,7 @@ open class CustomNavigationBar: UINavigationBar, Custom {
 		initUI()
 	}
 
-	public func initUI() -> Void { }
+	open func initUI() -> Void { }
 
 }
 
@@ -211,7 +211,7 @@ open class CustomButton: UIButton, Custom {
 		initUI()
 	}
 
-	public func initUI() -> Void { }
+	open func initUI() -> Void { }
 
 }
 
@@ -251,6 +251,6 @@ open class CustomImageView: UIImageView, Custom {
 		initUI()
 	}
 
-	public func initUI() -> Void { }
+	open func initUI() -> Void { }
 }
 
