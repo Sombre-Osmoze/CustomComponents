@@ -8,14 +8,14 @@
 import UIKit
 
 
-protocol Custom {
+public protocol Custom {
 
 	func initUI() -> Void
 }
 
 // MARK: - UI View
 
-class CustomView: UIView, Custom {
+open class CustomView: UIView, Custom {
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -23,19 +23,19 @@ class CustomView: UIView, Custom {
 		initUI()
 	}
 
-	required init?(coder: NSCoder) {
+	public required init?(coder: NSCoder) {
 		super.init(coder: coder)
 
 		initUI()
 	}
 
-	override func awakeFromNib() {
+	open override func awakeFromNib() {
 		super.awakeFromNib()
 
 		initUI()
 	}
 
-	override func awakeAfter(using coder: NSCoder) -> Any? {
+	open override func awakeAfter(using coder: NSCoder) -> Any? {
 		let object = super.awakeAfter(using: coder)
 
 		initUI()
@@ -43,18 +43,18 @@ class CustomView: UIView, Custom {
 		return object
 	}
 
-	override func prepareForInterfaceBuilder() {
+	open override func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 
 		initUI()
 	}
 
-	func initUI() -> Void { }
+	open func initUI() -> Void { }
 }
 
 // MARK: - UI Label
 
-class CustomLabel: UILabel, Custom {
+open class CustomLabel: UILabel, Custom {
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -62,19 +62,19 @@ class CustomLabel: UILabel, Custom {
 		initUI()
 	}
 
-	required init?(coder: NSCoder) {
+	required public init?(coder: NSCoder) {
 		super.init(coder: coder)
 
 		initUI()
 	}
 
-	override func awakeFromNib() {
+	open override func awakeFromNib() {
 		super.awakeFromNib()
 
 		initUI()
 	}
 
-	override func awakeAfter(using coder: NSCoder) -> Any? {
+	open override func awakeAfter(using coder: NSCoder) -> Any? {
 		let object = super.awakeAfter(using: coder)
 
 		initUI()
@@ -82,20 +82,20 @@ class CustomLabel: UILabel, Custom {
 		return object
 	}
 
-	override func prepareForInterfaceBuilder() {
+	open override func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 
 		initUI()
 	}
 
-	func initUI() -> Void { }
+	public func initUI() -> Void { }
 
 }
 
 
 // MARK: - UI Text Field
 
-class CustomTextField: UITextField, Custom {
+open class CustomTextField: UITextField, Custom {
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -103,19 +103,19 @@ class CustomTextField: UITextField, Custom {
 		initUI()
 	}
 
-	required init?(coder: NSCoder) {
+	required public init?(coder: NSCoder) {
 		super.init(coder: coder)
 
 		initUI()
 	}
 
-	override func awakeFromNib() {
+	open override func awakeFromNib() {
 		super.awakeFromNib()
 
 		initUI()
 	}
 
-	override func awakeAfter(using coder: NSCoder) -> Any? {
+	open override func awakeAfter(using coder: NSCoder) -> Any? {
 		let object = super.awakeAfter(using: coder)
 
 		initUI()
@@ -123,20 +123,20 @@ class CustomTextField: UITextField, Custom {
 		return object
 	}
 
-	override func prepareForInterfaceBuilder() {
+	open override func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 
 		initUI()
 	}
 
-	func initUI() -> Void { }
+	public func initUI() -> Void { }
 
 }
 
 // MARK: - UI Navigation Bar
 
 
-class CustomNavigationBar: UINavigationBar, Custom {
+open class CustomNavigationBar: UINavigationBar, Custom {
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -144,19 +144,19 @@ class CustomNavigationBar: UINavigationBar, Custom {
 		initUI()
 	}
 
-	required init?(coder: NSCoder) {
+	required public init?(coder: NSCoder) {
 		super.init(coder: coder)
 
 		initUI()
 	}
 
-	override func awakeFromNib() {
+	open override func awakeFromNib() {
 		super.awakeFromNib()
 
 		initUI()
 	}
 
-	override func awakeAfter(using coder: NSCoder) -> Any? {
+	open override func awakeAfter(using coder: NSCoder) -> Any? {
 		let object = super.awakeAfter(using: coder)
 
 		initUI()
@@ -164,20 +164,20 @@ class CustomNavigationBar: UINavigationBar, Custom {
 		return object
 	}
 
-	override func prepareForInterfaceBuilder() {
+	open override func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 
 		initUI()
 	}
 
-	func initUI() -> Void { }
+	public func initUI() -> Void { }
 
 }
 
 
 // MARK: - UI Button
 
-class CustomButton: UIButton, Custom {
+open class CustomButton: UIButton, Custom {
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -185,19 +185,19 @@ class CustomButton: UIButton, Custom {
 		initUI()
 	}
 
-	required init?(coder: NSCoder) {
+	required public init?(coder: NSCoder) {
 		super.init(coder: coder)
 
 		initUI()
 	}
 
-	override func awakeFromNib() {
+	open override func awakeFromNib() {
 		super.awakeFromNib()
 
 		initUI()
 	}
 
-	override func awakeAfter(using coder: NSCoder) -> Any? {
+	open override func awakeAfter(using coder: NSCoder) -> Any? {
 		let object = super.awakeAfter(using: coder)
 
 		initUI()
@@ -205,19 +205,19 @@ class CustomButton: UIButton, Custom {
 		return object
 	}
 
-	override func prepareForInterfaceBuilder() {
+	open override func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 
 		initUI()
 	}
 
-	func initUI() -> Void { }
+	public func initUI() -> Void { }
 
 }
 
 // MARK: - UI Image View
 
-class CustomImageView: UIImageView, Custom {
+open class CustomImageView: UIImageView, Custom {
 
 	override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -225,19 +225,19 @@ class CustomImageView: UIImageView, Custom {
 		initUI()
 	}
 
-	required init?(coder: NSCoder) {
+	required public init?(coder: NSCoder) {
 		super.init(coder: coder)
 
 		initUI()
 	}
 
-	override func awakeFromNib() {
+	open override func awakeFromNib() {
 		super.awakeFromNib()
 
 		initUI()
 	}
 
-	override func awakeAfter(using coder: NSCoder) -> Any? {
+	open override func awakeAfter(using coder: NSCoder) -> Any? {
 		let object = super.awakeAfter(using: coder)
 
 		initUI()
@@ -245,12 +245,12 @@ class CustomImageView: UIImageView, Custom {
 		return object
 	}
 
-	override func prepareForInterfaceBuilder() {
+	open override func prepareForInterfaceBuilder() {
 		super.prepareForInterfaceBuilder()
 
 		initUI()
 	}
 
-	func initUI() -> Void { }
+	public func initUI() -> Void { }
 }
 
